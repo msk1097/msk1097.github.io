@@ -20,7 +20,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
         </ul>
     </nav>
 
@@ -52,12 +52,52 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:manojkhatua1993@gmail.com">manojkhatua1993@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/msk1097">linkedin.com/in/msk1097</a></p>
+        <button class="btn" onclick="openContactForm()">Open Contact Form</button>
     </section>
+
+    <div id="contactForm" class="contact-popup">
+        <form id="form" onsubmit="sendEmail(event)">
+            <h3>Contact Me</h3>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" required>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+            <button type="button" onclick="closeContactForm()">Close</button>
+        </form>
+    </div>
 
     <footer>
         <p>© 2024 Manoj Khatua | Senior Data Analyst</p>
     </footer>
+
+    <script>
+        function openContactForm() {
+            document.getElementById("contactForm").style.display = "block";
+        }
+
+        function closeContactForm() {
+            document.getElementById("contactForm").style.display = "none";
+        }
+
+        function sendEmail(event) {
+            event.preventDefault();
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            // Send email using EmailJS or any other email service
+            // For demonstration, we will log to console
+            console.log("Subject: ", subject);
+            console.log("Message: ", message);
+            
+            // Here you can implement your email sending logic with an email service
+            // For example, using EmailJS or another service that allows email sending.
+
+            // Reset the form and close the popup
+            document.getElementById("form").reset();
+            closeContactForm();
+            alert("Email sent successfully!");
+        }
+    </script>
 </body>
 </html>
