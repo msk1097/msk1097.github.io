@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Manoj Khatua | Senior Data Analyst</title>
 </head>
 <body>
     <header>
         <div class="hero">
             <h1>Welcome to My Portfolio</h1>
-            <p>I'm Manoj Khatua, a Senior Data Analyst with expertise in Excel, Python, SQL, and Power BI.</p>
+            <p>I'm Manoj Khatua, a Senior Data Analyst specializing in Excel, Python, SQL, and Power BI.</p>
             <a href="#contact" class="btn">Contact Me</a>
         </div>
     </header>
@@ -26,8 +27,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Dynamic and results-driven Senior Data Analyst with over 9 years of experience in transforming complex datasets into actionable business insights.</p>
-        <p>Expert in Power BI, SQL, Python, and Azure technologies. Proven track record of optimizing ETL processes and creating insightful data visualizations.</p>
+        <p>Dynamic and results-driven Senior Data Analyst with over 9 years of experience in transforming complex datasets into actionable business insights. Expert in Power BI, SQL, Python, and Azure technologies. Proven track record of optimizing ETL processes and creating insightful data visualizations.</p>
     </section>
 
     <section id="portfolio">
@@ -35,12 +35,12 @@
         <div class="project">
             <h3>Project 1: Banking Analytics Dashboard</h3>
             <p>Developed an interactive Power BI dashboard for banking clients to provide real-time analytics.</p>
-            <a href="link_to_your_project_1" target="_blank">View Project</a>
+            <a href="link_to_your_project_1" target="_blank" class="project-link">View Project</a>
         </div>
         <div class="project">
             <h3>Project 2: ETL Process Automation</h3>
             <p>Automated ETL processes using Azure Logic Apps, improving data accuracy and reporting efficiency.</p>
-            <a href="link_to_your_project_2" target="_blank">View Project</a>
+            <a href="link_to_your_project_2" target="_blank" class="project-link">View Project</a>
         </div>
         <!-- Add more projects as needed -->
     </section>
@@ -67,6 +67,14 @@
         </form>
     </div>
 
+    <div class="social-links">
+        <h3>Connect with Me</h3>
+        <a href="https://www.linkedin.com/in/msk1097" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/msk1097" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/msk1097" target="_blank">Instagram</a>
+        <a href="https://x.com/msk1097" target="_blank">X</a>
+    </div>
+
     <footer>
         <p>© 2024 Manoj Khatua | Senior Data Analyst</p>
     </footer>
@@ -86,17 +94,23 @@
             const message = document.getElementById("message").value;
 
             // Send email using EmailJS or any other email service
-            // For demonstration, we will log to console
             console.log("Subject: ", subject);
             console.log("Message: ", message);
-            
-            // Here you can implement your email sending logic with an email service
-            // For example, using EmailJS or another service that allows email sending.
 
             // Reset the form and close the popup
             document.getElementById("form").reset();
             closeContactForm();
             alert("Email sent successfully!");
+        }
+
+        // Close the popup when clicking outside of it
+        window.onclick = function(event) {
+            const popup = document.getElementById("contactForm");
+            if (event.target == popup) {
+                closeContactForm();
+            } else if (!popup.contains(event.target) && event.target.className !== 'btn') {
+                closeContactForm();
+            }
         }
     </script>
 </body>
