@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Manoj Khatua | Senior Data Analyst</title>
 </head>
 <body>
@@ -19,15 +20,71 @@
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#resume">Resume</a></li>
+            <li><a href="#blogs">Blogs</a></li>
             <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Dynamic and results-driven Senior Data Analyst with over 9 years of experience in transforming complex datasets into actionable business insights. Expert in Power BI, SQL, Python, and Azure technologies. Proven track record of optimizing ETL processes and creating insightful data visualizations.</p>
+        <div class="about-container">
+            <img src="Photograph.jpg" alt="Manoj Khatua" class="profile-pic">
+            <p>Hi, I'm Manoj Khatua, and I’m basically the Sherlock Holmes of data—minus the hat and British accent. With over 9 years of experience as a Senior Data Analyst, I solve business mysteries with SQL queries, Python scripts, and a lot of caffeine.</p>
+            <p>When I'm not knee-deep in data, I enjoy automating processes that reduce manual labor—because who doesn’t love making the robots do the boring stuff?</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>SQL</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i> <!-- 5 stars for SQL -->
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Python</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i> <!-- 4 stars for Python -->
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Power BI</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i> <!-- 5 stars for Power BI -->
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Excel</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i> <!-- 4 stars for Excel -->
+                </div>
+            </div>
+            <div class="other-skills">
+                <h3>Other Skills</h3>
+                <p>ETL, Database Testing, PowerShell Scripting</p>
+            </div>
+        </div>
     </section>
 
     <section id="portfolio">
@@ -42,7 +99,18 @@
             <p>Automated ETL processes using Azure Logic Apps, improving data accuracy and reporting efficiency.</p>
             <a href="link_to_your_project_2" target="_blank" class="project-link">View Project</a>
         </div>
-        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="blogs">
+        <h2>Blogs</h2>
+        <div class="blog-post">
+            <h3><a href="link_to_blog_post_1">How to Master Power BI for Data Visualization</a></h3>
+            <p>Learn how to leverage Power BI to create dynamic, insightful dashboards that deliver actionable business insights.</p>
+        </div>
+        <div class="blog-post">
+            <h3><a href="link_to_blog_post_2">SQL Tips & Tricks for Faster Queries</a></h3>
+            <p>Optimizing SQL queries is an essential skill for every data analyst. Discover tips to improve your query performance.</p>
+        </div>
     </section>
 
     <section id="resume">
@@ -69,10 +137,10 @@
 
     <div class="social-links">
         <h3>Connect with Me</h3>
-        <a href="https://www.linkedin.com/in/msk1097" target="_blank">LinkedIn</a>
-        <a href="https://www.facebook.com/msk1097" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/msk1097" target="_blank">Instagram</a>
-        <a href="https://x.com/msk1097" target="_blank">X</a>
+        <a href="https://www.linkedin.com/in/msk1097" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.facebook.com/msk1097" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.instagram.com/msk1097" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://x.com/msk1097" target="_blank"><i class="fab fa-twitter"></i> X</a>
     </div>
 
     <footer>
