@@ -8,9 +8,9 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header */
+/* Header with Gradient Background */
 header {
-    background: linear-gradient(135deg, #007acc, #00aaff);
+    background: linear-gradient(135deg, #007acc, #ffffff);  /* Smooth gradient from blue to white */
     color: #fff;
     padding: 80px 20px;
     text-align: center;
@@ -18,22 +18,7 @@ header {
     position: relative;
 }
 
-.hero {
-    position: relative;
-    z-index: 1;
-}
-
-header::after {
-    content: '';
-    background: url('Photograph.jpg') center/cover no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-}
-
+/* Hero Section Styling */
 .hero h1 {
     font-size: 3em;
     margin: 0;
@@ -47,6 +32,20 @@ header::after {
     animation: fadeIn 2s ease-in-out;
 }
 
+.hero .btn {
+    background-color: #007acc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #005f99;
+}
+
+/* Keyframes for Animations */
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -66,6 +65,7 @@ header::after {
         opacity: 1;
     }
 }
+
 
 /* Navigation */
 nav {
@@ -120,6 +120,24 @@ section h2 {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Profile Picture Styling */
+.profile-pic {
+    width: 150px;               /* Adjust width for a proper size */
+    height: auto;               /* Ensures aspect ratio is maintained */
+    border-radius: 50%;         /* Makes the image circular */
+    object-fit: cover;          /* Ensures the image covers the area without distortion */
+    border: 4px solid #007acc;  /* Adds a blue border to match theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    margin-right: 20px;         /* Adds spacing from the text */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensures the image and text align horizontally */
+    flex-wrap: wrap;             /* Wraps content on smaller screens */
+}
+
 /* Enhanced Skills Section */
 #skills .skills-container {
     display: grid;
@@ -150,13 +168,6 @@ section h2 {
 .stars {
     color: #ffd700;
     font-size: 1.2em;
-}
-
-.other-skills {
-    grid-column: span 2;
-    text-align: left;
-    padding: 10px;
-    font-size: 1.1em;
 }
 
 /* Blog Section */
@@ -337,4 +348,17 @@ footer {
     bottom: 0;
     width: 100%;
     margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
